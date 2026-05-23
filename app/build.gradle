@@ -79,6 +79,8 @@ dependencies {
     implementation "org.mapstruct:mapstruct:${libs.versions.mapstruct.get()}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${libs.versions.mapstruct.get()}"
     annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+    // 生成 @ConfigurationProperties 元数据，供 IDE 识别 app.* 等自定义配置
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     // Testing
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

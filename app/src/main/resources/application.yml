@@ -8,12 +8,6 @@ logging:
 
 server:
   port: 8080
-  # 明确指定HTTP响应编码
-  servlet:
-    encoding:
-      charset: UTF-8
-      enabled: true
-      force: true
 
 # SpringDoc OpenAPI / Swagger配置
 springdoc:
@@ -55,6 +49,11 @@ spring:
         format_sql: true
 
   servlet:
+    # Spring Boot 4.0+：server.servlet.encoding.* 已迁移至 spring.servlet.encoding.*
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
     multipart:
       enabled: true
       max-file-size: 50MB  # 支持知识库上传（简历限制在业务层检查）
